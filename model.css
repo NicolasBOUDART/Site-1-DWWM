@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#buttonstart{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+}
+#baccueil{
+    border: none;
+    background: none;
+    width: 100vh;
+}
+#start{
+    display: flex;
+    width: 200vh;
+    height: 100vh;
+}
+#nstart{
+    position: absolute;
+    width: 20%;
+    height: auto;
+    top: 30vh;
+    left: 50vh;
+}
+#nupleft{
+    position: absolute;
+    width: 20%;
+    height: auto;
+    top: 30vh;
+    left: 50vh;
+    animation: start;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#menu{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    left: -250vh;
+}
+#menu1{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    left: -250vh;
+    z-index: 10;
+    animation: menustart;
+    animation-delay: 5s;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+#a2,#a3,#a4,#a5,#a6{
+    width: 100%;
+}
+#a1{
+    width: 40%;
+}
+#b2,#b3,#b4,#b5,#b6{
+    width: 100%;
+    height: 10vh;
+    border: none;
+    background: none;
+    transition: linear 1s;
+}
+#b2:hover,#b3:hover,#b4:hover,#b5:hover,#b6:hover{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 10vh;
+    border-top: none;
+    border-bottom: none;
+    background: rgb(135, 135, 229);
+}
+#b1{
+    width: 100%;
+    border: none;
+    background: none;
+}
+#morpion{
+    width: 60%;
+    left: -100vh;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+#morpionvisible{
+    width: 60%;
+    position: absolute;
+    top: 20vh;
+    margin-left: 20%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+}
+#morpionvisible div{
+    background-color: whitesmoke;
+    border: 2vh solid black;
+    width: 100%;
+    height: 20vh;
+}
+#player1{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "one one one"
+        "2 3 4"
+        "5 6 7"
+        "8 9 10";
+    left: -100vh;
+    position: absolute;
+    top: 20vh;
+    width: 20%;
+}
+#player1visible{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "one one one"
+        "2 3 4"
+        "5 6 7"
+        "8 9 10";
+    left: 0;
+    position: absolute;
+    top: 20vh;
+    width: 20%;
+}
+#player1visible button{
+    border: none;
+    background: none;
+}
+#titrej1{
+    grid-area: one;
+    text-align: center;
+}
+#player2{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "one one one"
+        "2 3 4"
+        "5 6 7"
+        "8 9 10";
+    left: -100vh;
+    position: absolute;
+    top: 20vh;
+    width: 20%;
+}
+#player2visible{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "one one one"
+        "2 3 4"
+        "5 6 7"
+        "8 9 10";
+    right: 0;
+    position: absolute;
+    top: 20vh;
+    width: 20%;
+}
+#player2visible button{
+    border: none;
+    background: none;
+}
+#titrej2{
+    grid-area: one;
+    text-align: center;
+}
+@keyframes start {
+    from{
+        top: 30vh;
+        left: 50vh;
+        width: 20%;
+        transform: rotateZ(0deg);
+        transform: rotateX(0deg);
+        transform: rotateY(0deg);
+    }
+    to{
+        top: 0vh;
+        left: 0vh;
+        width: 6%;
+        transform: rotateZ(360deg);
+        transform: rotateX(360deg);
+        transform: rotateY(360deg);
+        position: fixed;
+    }
+}
+@keyframes menustart {
+    from{
+        left: -250vh;
+    }
+    to{
+        left: 0;
+        z-index: 1;
+    }
+}
+@keyframes rotate{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(360deg);
+    }
+}

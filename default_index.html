@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<HEAD> 
+<link rel="stylesheet"  href="model.css">
+<TITLE>TITRE DE LA PAGE </TITLE>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="script.js"></script> 
+</HEAD> 
+<BODY> 
+<div id="start">
+    <button id="buttonstart" onclick="startingblock()" >     <img src="ress/n.png" id="nstart">  </button>
+
+       <div id="menu">
+            <a id="a1" href="default_index.html">     <button id="b1">      </button>   </a>
+            <a id="a2">     <button id="b2">    PARTIE DU SITE  </button>   </a>
+            <a id="a3">     <button id="b3">    PARTIE DU SITE  </button>   </a>
+            <a id="a4">     <button id="b4">    PARTIE DU SITE  </button>   </a>
+            <a id="a5">     <button id="b5">    PARTIE DU SITE  </button>   </a>
+            <a id="a6">     <button id="b6" onclick="affichemorpion()">    MORPION JS      </button>   </a>
+        </div>
+</div>
+    <div id="morpion">
+        <div id="case1">    <img src=""id="bcase1">   </div>
+        <div id="case2">    <img src=""id="bcase2">   </div>
+        <div id="case3">    <img src=""id="bcase3">   </div>
+        <div id="case4">    <img src=""id="bcase4">   </div>
+        <div id="case5">    <img src=""id="bcase5">   </div>
+        <div id="case6">    <img src=""id="bcase6">   </div>
+        <div id="case7">    <img src=""id="bcase7">   </div>
+        <div id="case8">    <img src=""id="bcase8">   </div>
+        <div id="case9">    <img src=""id="bcase9">   </div>
+    </div>
+    <div id="player1">
+        <h1 id="titrej1"> JOUEUR 1</h1>
+        <button id="button_player1" onclick="changecase1player1()"> CASE 1</button>
+        <button id="button_player1" onclick="changecase1player2()"> CASE 2</button>
+        <button id="button_player1" onclick="changecase1player3()"> CASE 3</button>
+        <button id="button_player1" onclick="changecase1player4()"> CASE 4</button>
+        <button id="button_player1" onclick="changecase1player5()"> CASE 5</button>
+        <button id="button_player1" onclick="changecase1player6()"> CASE 6</button>
+        <button id="button_player1" onclick="changecase1player7()"> CASE 7</button>
+        <button id="button_player1" onclick="changecase1player8()"> CASE 8</button>
+        <button id="button_player1" onclick="changecase1player9()"> CASE 9</button>
+    </div>
+    
+    <div id="player2">
+        <h1 id="titrej1"> JOUEUR 2</h1>
+        <button id="button_player2" onclick="changecase2player1()"> CASE 1</button>
+        <button id="button_player2" onclick="changecase2player2()"> CASE 2</button>
+        <button id="button_player2" onclick="changecase2player3()"> CASE 3</button>
+        <button id="button_player2" onclick="changecase2player4()"> CASE 4</button>
+        <button id="button_player2" onclick="changecase2player5()"> CASE 5</button>
+        <button id="button_player2" onclick="changecase2player6()"> CASE 6</button>
+        <button id="button_player2" onclick="changecase2player7()"> CASE 7</button>
+        <button id="button_player2" onclick="changecase2player8()"> CASE 8</button>
+        <button id="button_player2" onclick="changecase2player9()"> CASE 9</button>
+    </div>
+    <audio src="ress/ost.mp3" id="ost"></audio>
+</BODY>
+</HTML>
